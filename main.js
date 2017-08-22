@@ -2,13 +2,8 @@ const randomNumber = Math.floor(Math.random() * 100 +1);
 
 document.querySelector('.guess').addEventListener('click', (e) => {
   e.preventDefault();
-  grabGuess();
+  checkInput()
 });
-
-function grabGuess() {
-    let userNumber = document.querySelector('.user-guess').value;
-    displayLastGuess(userNumber);
-}
 
 function displayLastGuess(value) {
   document.querySelector('.last-guess').innerHTML = value;
@@ -18,6 +13,7 @@ function displayLastGuess(value) {
 function compareGuess(value) {
   let userValue = parseInt(value);
   let response = document.querySelector('.response');
+
   if (userValue === randomNumber) {
     response.innerHTML = 'BOOM!';
   } else if (userValue > randomNumber) {
@@ -25,6 +21,14 @@ function compareGuess(value) {
   } else {
     response.innerHTML = 'That is too low!';
   }
-  console.log(userValue, ' this was totes parsed')
-  console.log(value, ' the value', randomNumber, ' randomNumber');
+}
+
+function checkInput() {
+  let userNumber = parseInt(document.querySelector('.user-guess').value);
+
+  if (userNumber < 0 || userNumber > 100) {
+    console.log('absolutely not');
+  } else {
+    displayLastGuess(userNumber)
+  }
 }
