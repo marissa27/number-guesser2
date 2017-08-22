@@ -31,6 +31,7 @@ function compareGuess(value) {
   if (userValue === randomNumber) {
     response.innerHTML = 'BOOM!';
     correctAnswer();
+    showRange();
   } else if (userValue > randomNumber) {
     response.innerHTML = 'That is too high!';
   } else if (userValue < randomNumber) {
@@ -63,7 +64,6 @@ document.querySelector('.user-guess').addEventListener('input', function(e) {
   if (!userGuess) {
     document.querySelector('.guess').disabled = true;
     document.querySelector('.clear').disabled = true;
-
   } else if (userGuess) {
     document.querySelector('.guess').disabled = false;
     document.querySelector('.clear').disabled = false;
@@ -88,4 +88,8 @@ document.querySelector('.new-range-btn').addEventListener('click', (e) => {
 
 function changeRange (min, max)  {
   return randomNumber = Math.floor(Math.random() * (max - min)) + min;
+}
+
+function showRange() {
+  document.querySelector('.range-form').classList.remove('initial')
 }

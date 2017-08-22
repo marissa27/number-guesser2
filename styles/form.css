@@ -18,3 +18,7 @@ input::-webkit-input-placeholder {
   color: #D0D2D3;
   font-weight: 300;
 }
+
+.initial {
+  display: none;
+}
