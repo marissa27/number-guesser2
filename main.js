@@ -1,4 +1,6 @@
 let randomNumber = Math.floor(Math.random() * 100 +1);
+let min = 0;
+let max = 100;
 
 document.querySelector('.guess').addEventListener('click', (e) => {
   e.preventDefault();
@@ -13,7 +15,7 @@ document.querySelector('.clear').addEventListener('click', (e) => {
 });
 
 document.querySelector('.reset').addEventListener('click', (e) => {
-  displayLastGuess('Zilch')
+  displayLastGuess('Zilch');
   return randomNumber = Math.floor(Math.random() * 100 +1);
 })
 
@@ -28,13 +30,20 @@ function compareGuess(value) {
 
   if (userValue === randomNumber) {
     response.innerHTML = 'BOOM!';
+    correctAnswer();
   } else if (userValue > randomNumber) {
     response.innerHTML = 'That is too high!';
   } else if (userValue < randomNumber) {
     response.innerHTML = 'That is too low!';
   } else {
-    response.innerHTML = 'Please enter a value from 0 to 100';
+    response.innerHTML = 'Please enter a value from ' + min + 'to ' + max;
   }
+}
+
+function correctAnswer() {
+  min = min - 10;
+  max = max + 10;
+  return randomNumber = Math.floor(Math.random() * (max - min)) + min;
 }
 
 function checkInput() {
@@ -68,4 +77,15 @@ function activateReset() {
     document.querySelector('.reset').disabled = true;
   }
 }
-console.log(randomNumber)
+
+document.querySelector('.new-range-btn').addEventListener('click', (e) => {
+  e.preventDefault();
+  min = parseInt(document.querySelector('.min').value);
+  max = parseInt(document.querySelector('.max').value);
+
+  changeRange(min, max);
+})
+
+function changeRange (min, max)  {
+  return randomNumber = Math.floor(Math.random() * (max - min)) + min;
+}
