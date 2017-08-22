@@ -1,10 +1,4 @@
-window.onload = function() {
-  randomNumber();
-};
-
-function randomNumber() {
-  let randomNumber = Math.floor(Math.random() * 100 +1);
-}
+const randomNumber = Math.floor(Math.random() * 100 +1);
 
 document.querySelector('.guess').addEventListener('click', (e) => {
   e.preventDefault();
@@ -18,4 +12,19 @@ function grabGuess() {
 
 function displayLastGuess(value) {
   document.querySelector('.last-guess').innerHTML = value;
+  compareGuess(value);
+}
+
+function compareGuess(value) {
+  let userValue = parseInt(value);
+  let response = document.querySelector('.response');
+  if (userValue === randomNumber) {
+    response.innerHTML = 'BOOM!';
+  } else if (userValue > randomNumber) {
+    response.innerHTML = 'That is too high!';
+  } else {
+    response.innerHTML = 'That is too low!';
+  }
+  console.log(userValue, ' this was totes parsed')
+  console.log(value, ' the value', randomNumber, ' randomNumber');
 }
