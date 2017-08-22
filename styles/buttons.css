@@ -1,15 +1,14 @@
 .form-buttons {
-  margin-top: 25px;
-  width: 45%;
   display: flex;
   justify-content: space-between;
+  margin-top: 25px;
 }
 
 button {
-  color: #FFF;
   background-color: #D0D2D3;
-  border-style: none;
   border-radius: 15px;
+  border-style: none;
+  color: #FFF;
 }
 
 button:hover {
@@ -18,8 +17,21 @@ button:hover {
 
 .guess,
 .clear {
-  padding: 3px 0;
   justify-content: space-between;
+  padding: 3px 0;
+}
+
+.form-buttons,
+.guess,
+.clear,
+.reset {
   width: 45%;
   font-size: 17px;
+}
+
+.reset {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
 }

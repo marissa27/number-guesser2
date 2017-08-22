@@ -1,7 +1,7 @@
 @import url('header.css');
 @import url('form.css');
 @import url('buttons.css');
-@import url('response.css');
+@import url('guess.css');
 
 * {
   box-sizing: border-box;
@@ -11,4 +11,10 @@
 
 h1 {
   color: #ED458B;
+}
+
+h3 {
+  color: #404041;
+  font-weight: 300;
+  margin: 0 2px;
 }
