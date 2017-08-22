@@ -1,3 +1,11 @@
+window.onload = function() {
+  randomNumber();
+};
+
+function randomNumber() {
+  let randomNumber = Math.floor(Math.random() * 100 +1);
+}
+
 document.querySelector('.guess').addEventListener('click', (e) => {
   e.preventDefault();
   grabGuess();
