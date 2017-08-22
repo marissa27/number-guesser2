@@ -1,17 +1,17 @@
-.last-guess-area {
+.last-guess-area,
+.hint {
   display: flex;
-  flex-direction: column;
+}
+
+.last-guess-area {
   align-items: center;
+  flex-direction: column;
   margin-top: 35px;
 }
 
 .last-guess {
   margin: -15px 0;
+  color: #EB008B;
   font-size: 130px;
   font-weight: 300;
-  color: #EB008B;
-}
-
-.hint {
-  display: flex;
 }

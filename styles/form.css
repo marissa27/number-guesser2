@@ -1,16 +1,16 @@
 form {
-  display: flex;
   align-items: center;
+  display: flex;
   flex-direction: column;
 }
 
 .user-guess {
   margin-top: 30px;
+  padding: 3px;
   width: 45%;
   border: 1px solid #D0D2D3;
-  padding: 3px;
-  font-size: 17px;
   color: #ED458B;
+  font-size: 17px;
   font-weight: 700;
 }
 

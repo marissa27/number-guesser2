@@ -1,7 +1,13 @@
-.form-buttons {
-  display: flex;
+.form-buttons,
+.guess,
+.clear {
   justify-content: space-between;
-  margin-top: 25px;
+}
+
+.form-buttons,
+.reset {
+  display: flex;
+  margin: 30px auto;
 }
 
 button {
@@ -17,7 +23,6 @@ button:hover {
 
 .guess,
 .clear {
-  justify-content: space-between;
   padding: 3px 0;
 }
 
@@ -31,7 +36,5 @@ button:hover {
 
 .reset {
   align-items: center;
-  display: flex;
   justify-content: center;
-  margin: 30px auto;
 }

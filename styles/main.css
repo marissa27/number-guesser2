@@ -4,9 +4,9 @@
 @import url('guess.css');
 
 * {
+  margin: 0;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
-  margin: 0;
 }
 
 h1 {
@@ -14,7 +14,7 @@ h1 {
 }
 
 h3 {
+  margin: 0 2px;
   color: #404041;
   font-weight: 300;
-  margin: 0 2px;
 }
