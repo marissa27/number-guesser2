@@ -3,16 +3,18 @@ let randomNumber = Math.floor(Math.random() * 100 +1);
 document.querySelector('.guess').addEventListener('click', (e) => {
   e.preventDefault();
   checkInput();
-  document.querySelector('.user-guess').value = '';
+  document.getElementById("myForm").reset();
+  activateReset();
 });
 
 document.querySelector('.clear').addEventListener('click', (e) => {
   e.preventDefault();
-  document.querySelector('.user-guess').value = '';
+  document.getElementById("myForm").reset();
 });
 
 document.querySelector('.reset').addEventListener('click', (e) => {
-  let randomNumber = Math.floor(Math.random() * 100 +1);
+  displayLastGuess('Zilch')
+  return randomNumber = Math.floor(Math.random() * 100 +1);
 })
 
 function displayLastGuess(value) {
@@ -31,7 +33,7 @@ function compareGuess(value) {
   } else if (userValue < randomNumber) {
     response.innerHTML = 'That is too low!';
   } else {
-    response.innerHTML = 'ERROR: Please enter a value from 0 to 100';
+    response.innerHTML = 'Please enter a value from 0 to 100';
   }
 }
 
@@ -48,11 +50,22 @@ function checkInput() {
 }
 
 document.querySelector('.user-guess').addEventListener('input', function(e) {
-  if (!document.querySelector('.user-guess').value) {
+  let userGuess = document.querySelector('.user-guess').value;
+  if (!userGuess) {
     document.querySelector('.guess').disabled = true;
     document.querySelector('.clear').disabled = true;
-  } else if (document.querySelector('.user-guess').value) {
+
+  } else if (userGuess) {
     document.querySelector('.guess').disabled = false;
     document.querySelector('.clear').disabled = false;
   }
 });
+
+function activateReset() {
+  if (document.querySelector('.last-guess') != 'Zilch') {
+    document.querySelector('.reset').disabled = false;
+  } else {
+    document.querySelector('.reset').disabled = true;
+  }
+}
+console.log(randomNumber)
