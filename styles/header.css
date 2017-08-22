@@ -1,1 +1,13 @@
-g
+header {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+  background-color: #404041;
+}
+
+.secondary-title {
+  margin-left: 10px;
+  color: #E6E7E8;
+  font-weight: 300;
+}

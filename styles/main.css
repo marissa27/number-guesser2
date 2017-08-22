@@ -4,5 +4,11 @@
 @import url('response.css');
 
 * {
+  box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+h1 {
+  color: #ED458B;
 }
