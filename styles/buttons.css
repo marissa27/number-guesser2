@@ -1,0 +1,25 @@
+.form-buttons {
+  margin-top: 25px;
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  color: #FFF;
+  background-color: #D0D2D3;
+  border-style: none;
+  border-radius: 15px;
+}
+
+button:hover {
+  background-color: #EB008B;
+}
+
+.guess,
+.clear {
+  padding: 3px 0;
+  justify-content: space-between;
+  width: 45%;
+  font-size: 17px;
+}
