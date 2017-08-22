@@ -2,3 +2,7 @@
 @import url('form.css');
 @import url('buttons.css');
 @import url('response.css');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
