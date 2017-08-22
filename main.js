@@ -86,6 +86,7 @@ document.querySelector('.new-range-btn').addEventListener('click', (e) => {
   min = parseInt(document.querySelector('.min').value);
   max = parseInt(document.querySelector('.max').value);
   changeRange(min, max);
+  document.getElementById("new-range").reset();
 });
 
 document.querySelector('.kid-version').addEventListener('click', (e) => {
@@ -94,9 +95,12 @@ document.querySelector('.kid-version').addEventListener('click', (e) => {
 });
 
 function changeRange (min, max)  {
+  document.querySelector('.show-curr-range').innerHTML = 'Guess a number ' + min + ' to ' + max;
+  document.querySelector('.last-guess').innerHTML = 'Zilch';
+  document.querySelector('.response').innerHTML = 'Time to guess!'
   return randomNumber = Math.floor(Math.random() * (max - min)) + min;
 }
 
 function showRange() {
-  document.querySelector('.range-form').classList.remove('initial')
+  document.querySelector('.range-form').classList.remove('initial');
 }

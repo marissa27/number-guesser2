@@ -46,4 +46,5 @@ button:disabled {
 .kid-version {
   display: flex;
   margin: 0 auto;
+  padding: 6px 10px;
 }

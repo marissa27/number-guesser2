@@ -19,3 +19,10 @@ h3 {
   color: #404041;
   font-weight: 300;
 }
+
+h4 {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 300;
+  margin-bottom: -10px;
+}
