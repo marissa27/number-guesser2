@@ -37,3 +37,9 @@ input::-webkit-input-placeholder {
 .new-range-btn {
   margin-top: 10px;
 }
+
+@media only screen and (max-width: 334px)  {
+  .user-guess {
+    font-size: 15px;
+  }
+}

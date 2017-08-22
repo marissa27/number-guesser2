@@ -48,3 +48,13 @@ button:disabled {
   margin: 0 auto;
   padding: 6px 10px;
 }
+
+@media only screen and (max-width: 334px)  {
+  .form-buttons,
+  .guess,
+  .clear,
+  .reset {
+    width: 45%;
+    font-size: 14px;
+  }
+}

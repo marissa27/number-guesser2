@@ -26,3 +26,13 @@ h4 {
   font-weight: 300;
   margin-bottom: -10px;
 }
+
+@media only screen and (max-width: 334px)  {
+  h1 {
+    font-size: 27px;
+  }
+
+  h3 {
+    font-size: 17px;
+  }
+}

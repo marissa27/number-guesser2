@@ -40,7 +40,7 @@ function compareGuess(value) {
     response.innerHTML = 'That is too low!';
     kidHelp.innerHTML = 'You are ' + (randomNumber - userValue) + ' number(s) away.';
   } else {
-    response.innerHTML = 'Please enter a value from ' + min + 'to ' + max;
+    response.innerHTML = 'Please enter a value from ' + min + ' to ' + max;
   }
 }
 

@@ -15,3 +15,9 @@
   font-size: 130px;
   font-weight: 300;
 }
+
+@media only screen and (max-width: 334px)  {
+  .last-guess {
+    font-size: 120px;
+  }
+}
