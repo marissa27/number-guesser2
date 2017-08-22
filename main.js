@@ -1,9 +1,19 @@
-const randomNumber = Math.floor(Math.random() * 100 +1);
+let randomNumber = Math.floor(Math.random() * 100 +1);
 
 document.querySelector('.guess').addEventListener('click', (e) => {
   e.preventDefault();
   checkInput();
+  document.querySelector('.user-guess').value = '';
 });
+
+document.querySelector('.clear').addEventListener('click', (e) => {
+  e.preventDefault();
+  document.querySelector('.user-guess').value = '';
+});
+
+document.querySelector('.reset').addEventListener('click', (e) => {
+  let randomNumber = Math.floor(Math.random() * 100 +1);
+})
 
 function displayLastGuess(value) {
   document.querySelector('.last-guess').innerHTML = value;
@@ -30,11 +40,9 @@ function checkInput() {
   let bannerMessage = document.querySelector('.notification-message');
 
   if (userNumber < 0 || userNumber > 100) {
-    bannerMessage.innerHTML = "That is outside of the range.";
-  } else if (userNumber === isNaN(NaN)) {
-    console.log('ruh roh')
-  }  else {
-    bannerMessage.innerHTML = "";
+    bannerMessage.innerHTML = 'That is outside of the range.';
+  } else {
+    bannerMessage.innerHTML = '';
     displayLastGuess(userNumber);
   }
 }
