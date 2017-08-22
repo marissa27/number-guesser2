@@ -29,11 +29,16 @@
       </div>
     </form>
 
+    <button class="kid-version">
+      Turn on Kid Version
+    </button>
+
     <section class="last-guess-area">
       <h3>Your last guess was</h3>
       <h1 class="last-guess">Zilch</h1>
       <div class="hint">
         <h3 class="response">Guess a Number 1 - 100.</h3>
+        <h3 class="kid-help initial"></h3>
       </div>
     </section>
 
@@ -43,13 +48,14 @@
 
     <form id="new-range" class="range-form initial">
       <h5>Set your own min and max number!</h5>
-      <input type="number" placeholder="Min Number" class="min">
-      <input type="number" placeholder="Max Number" class="max">
+      <div class="inputs">
+        <input type="number" placeholder="Min Number" class="min">
+        <input type="number" placeholder="Max Number" class="max">
+      </div>
       <button class="new-range-btn">
         Submit
       </button>
     </form>
-
 
 <script type="text/javascript" src="main.js">
 

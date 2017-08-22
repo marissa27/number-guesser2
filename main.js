@@ -27,6 +27,7 @@ function displayLastGuess(value) {
 function compareGuess(value) {
   let userValue = parseInt(value);
   let response = document.querySelector('.response');
+  let kidHelp = document.querySelector('.kid-help')
 
   if (userValue === randomNumber) {
     response.innerHTML = 'BOOM!';
@@ -34,8 +35,10 @@ function compareGuess(value) {
     showRange();
   } else if (userValue > randomNumber) {
     response.innerHTML = 'That is too high!';
+    kidHelp.innerHTML = 'You are ' + (userValue - randomNumber) + ' number(s) away.';
   } else if (userValue < randomNumber) {
     response.innerHTML = 'That is too low!';
+    kidHelp.innerHTML = 'You are ' + (randomNumber - userValue) + ' number(s) away.';
   } else {
     response.innerHTML = 'Please enter a value from ' + min + 'to ' + max;
   }
@@ -82,9 +85,13 @@ document.querySelector('.new-range-btn').addEventListener('click', (e) => {
   e.preventDefault();
   min = parseInt(document.querySelector('.min').value);
   max = parseInt(document.querySelector('.max').value);
-
   changeRange(min, max);
-})
+});
+
+document.querySelector('.kid-version').addEventListener('click', (e) => {
+  e.preventDefault();
+  document.querySelector('.kid-help').classList.remove('initial');
+});
 
 function changeRange (min, max)  {
   return randomNumber = Math.floor(Math.random() * (max - min)) + min;

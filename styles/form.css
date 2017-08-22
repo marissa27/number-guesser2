@@ -22,3 +22,17 @@ input::-webkit-input-placeholder {
 .initial {
   display: none;
 }
+
+#new-range {
+  margin-top: 30px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.new-range-btn {
+  margin-top: 10px;
+}

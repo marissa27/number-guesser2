@@ -42,3 +42,8 @@ button:disabled {
   align-items: center;
   justify-content: center;
 }
+
+.kid-version {
+  display: flex;
+  margin: 0 auto;
+}
