@@ -2,7 +2,7 @@ const randomNumber = Math.floor(Math.random() * 100 +1);
 
 document.querySelector('.guess').addEventListener('click', (e) => {
   e.preventDefault();
-  checkInput()
+  checkInput();
 });
 
 function displayLastGuess(value) {
@@ -18,17 +18,33 @@ function compareGuess(value) {
     response.innerHTML = 'BOOM!';
   } else if (userValue > randomNumber) {
     response.innerHTML = 'That is too high!';
-  } else {
+  } else if (userValue < randomNumber) {
     response.innerHTML = 'That is too low!';
+  } else {
+    response.innerHTML = 'ERROR: Please enter a value from 0 to 100';
   }
 }
 
 function checkInput() {
   let userNumber = parseInt(document.querySelector('.user-guess').value);
+  let bannerMessage = document.querySelector('.notification-message');
 
   if (userNumber < 0 || userNumber > 100) {
-    document.querySelector('.notification-message').innerHTML = "That is outside of the range.";
-  } else {
-    displayLastGuess(userNumber)
+    bannerMessage.innerHTML = "That is outside of the range.";
+  } else if (userNumber === isNaN(NaN)) {
+    console.log('ruh roh')
+  }  else {
+    bannerMessage.innerHTML = "";
+    displayLastGuess(userNumber);
   }
 }
+
+document.querySelector('.user-guess').addEventListener('input', function(e) {
+  if (!document.querySelector('.user-guess').value) {
+    document.querySelector('.guess').disabled = true;
+    document.querySelector('.clear').disabled = true;
+  } else if (document.querySelector('.user-guess').value) {
+    document.querySelector('.guess').disabled = false;
+    document.querySelector('.clear').disabled = false;
+  }
+});
