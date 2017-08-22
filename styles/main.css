@@ -2,6 +2,7 @@
 @import url('form.css');
 @import url('buttons.css');
 @import url('guess.css');
+@import url('notification.css');
 
 * {
   margin: 0;

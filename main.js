@@ -27,7 +27,7 @@ function checkInput() {
   let userNumber = parseInt(document.querySelector('.user-guess').value);
 
   if (userNumber < 0 || userNumber > 100) {
-    console.log('absolutely not');
+    document.querySelector('.notification-message').innerHTML = "That is outside of the range.";
   } else {
     displayLastGuess(userNumber)
   }
