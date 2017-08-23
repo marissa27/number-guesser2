@@ -38,8 +38,9 @@ input::-webkit-input-placeholder {
   margin-top: 10px;
 }
 
-@media only screen and (max-width: 334px)  {
+@media only screen and (max-width: 350px)  {
   .user-guess {
     font-size: 15px;
+    width: 50%
   }
 }
