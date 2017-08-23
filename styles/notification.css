@@ -1,7 +1,7 @@
 .notification-banner {
   position: fixed;
-  background-color: #ED458B;
-  width: 100%;
   text-align: center;
+  width: 100%;
+  background-color: #ED458B;
   color: white;
 }

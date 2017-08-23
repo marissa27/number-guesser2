@@ -31,10 +31,10 @@ input::-webkit-input-placeholder {
 .inputs {
   display: flex;
   flex-direction: row;
-  margin-top: 10px;
 }
 
-.new-range-btn {
+.new-range-btn,
+.inputs {
   margin-top: 10px;
 }
 
